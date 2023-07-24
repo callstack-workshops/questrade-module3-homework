@@ -6,10 +6,12 @@ import {
   useWindowDimensions,
   Pressable,
   Animated,
+  TouchableOpacity,
 } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
-import { Lottery } from '../types';
+import { useNavigation } from '@react-navigation/native';
+import { LotteryDetailsNavigationProp, Lottery } from '../types';
 import { colors } from '../colors';
 import SearchInput from './SearchInput';
 
@@ -32,6 +34,8 @@ const LotteryList = ({
   const [filter, setFilter] = useState('');
   const { width } = useWindowDimensions();
   const scrollY = useRef(new Animated.Value(0)).current;
+
+  const navigation = useNavigation<LotteryDetailsNavigationProp>();
 
   const headerHeight = scrollY.interpolate({
     inputRange: [0, 200],
@@ -82,7 +86,12 @@ const LotteryList = ({
             <MaterialIcons name="done" size={24} color="black" />
           )}
         </View>
-        <Text style={styles.name}>{item.name}</Text>
+        <TouchableOpacity
+          accessibilityRole="button"
+          onPress={() => navigation.navigate('LotteryDetails', { id: item.id })}
+        >
+          <Text style={styles.name}>{item.name}</Text>
+        </TouchableOpacity>
         <Text style={styles.prize}>{item.prize}</Text>
         <Text style={styles.id}>{item.id}</Text>
       </Pressable>
