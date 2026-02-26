@@ -1,13 +1,13 @@
-# Module 5 Homework
+# Module 3 Homework
 
 Now that we have an awesome lottery app, our CTO and Tech Lead decided to fully use the potential of the selected technologies. The plan is to embrace a wide spectrum of functionalities by using the advanced patterns known in React community. They’re so satisfied with React Native that they want you to extend app functionalities, by adding the details screen and proper error handling. Based on the experience CTO also mentioned that it would be perfect to keep in mind the performance of the app, especially when taking into consideration their further plans to extend the app.
 
 ### Homework management :house:
 
 The final result of all homework is the React Native Application full of features implemented iteratively in the end phase of each module in the course. In order to keep consistency and track all of your changes we highly recommend you to create your own GitHub repository where your work as a participant will be stored. Your GitHub repository should be shared with all trainers, which will enable us to verify your work and communicate:
-- Wiktor Szlegier: https://github.com/Wiiktor22
-- Adam Trzciński: https://github.com/adamTrz
-- Mariusz Pasiński: https://github.com/mani3xis 
+
+- Filip jarno: https://github.com/ziarno
+- Andrii Doroshenko: https://github.com/andriicallstack
 
 ### The goal of this module’s homework
 
@@ -17,7 +17,7 @@ The goal of this homework is to build the details screen for the lottery and the
 
 You should be able to continue working on the same homework project but if you don’t have it available or you want to start fresh here is a starting point for this homework:
 
-https://github.com/callstack-workshops/abbott-module-5-homework
+https://github.com/callstack-workshops/questrade-module3-homework
 
 ### Checkpoints :bulb:
 
@@ -257,7 +257,7 @@ export const LotteryDetails = () => {
   <summary><b>Step 6. Build a simple UI to display all information about the lottery</b></summary><br>
   In the final step we can extend a bit our detail view to display full range of information. We will not implement anything specific since this task was focused on the `render prop` pattern, but feel free to modify the UI however you like!
 
-  <img width="400" alt="ui" src="https://github.com/callstack-workshops/abbott-module-5-homework/assets/50460088/19f3f9cd-839c-47d6-ad5e-de5e798ad628" />
+![274534672-19f3f9cd-839c-47d6-ad5e-de5e798ad628.png](assets/274534672-19f3f9cd-839c-47d6-ad5e-de5e798ad628.png)
 
 
   Example code implementation: 
@@ -296,7 +296,7 @@ const LotteryDetailsView = ({ lottery }: LotteryDetailsViewProps) => {
   ```
 </details>
 
-> :bulb: You are now here → [`part-1`](https://github.com/callstack-workshops/abbott-module-5-homework/tree/part-1)
+> :bulb: You are now here → [`part-1`](https://github.com/callstack-workshops/questrade-module3-homework/tree/part-1)
 
 ## Part 2:  Error Boundaries for the Details Screen
 
@@ -307,7 +307,7 @@ Let’s add the Error Boundary component to the LotteryDetails screen.
 
   Let’s start the task by creating an error screen:
 
-  <img width="400" alt="ui" src="https://github.com/callstack-workshops/abbott-module-5-homework/assets/50460088/6686b418-7d57-4add-8235-e15f06daafe9" />
+![274535182-6686b418-7d57-4add-8235-e15f06daafe9.png](assets/274535182-6686b418-7d57-4add-8235-e15f06daafe9.png)
 
   ```tsx
  import { StyleSheet, View, Text, Button } from 'react-native';
@@ -441,7 +441,7 @@ useEffect(() => {
 
 </details>
 
-> :bulb: You are now here → [`part-2`](https://github.com/callstack-workshops/abbott-module-5-homework/tree/part-2)
+> :bulb: You are now here → [`part-2`](https://github.com/callstack-workshops/questrade-module3-homework/tree/part-2)
 
 ## Part 3:  React DevTools
 
@@ -474,49 +474,49 @@ Let’s analyze how components inside of `LotteryDetails` screen are re-renderin
 
 Switch off to the Profiler tab and start to record by pressing one of the blue recording buttons.
 
-<img width="800" alt="Zrzut ekranu 2023-07-25 o 08 25 50" src="https://github.com/callstack-workshops/abbott-module-5-homework/assets/50460088/53f839df-f071-40ec-b4c2-3b372d764c1c">
+![274535509-53f839df-f071-40ec-b4c2-3b372d764c1c.png](assets/274535509-53f839df-f071-40ec-b4c2-3b372d764c1c.png)
 
 Then open the `LotteryDetails` screen in the app by pressing the lottery name.
 
 After the performed transition, and visible  `LotteryDetails` screen we can stop the recording by pressing one of the stop buttons:
 
-<img width="800" alt="Zrzut ekranu 2023-07-25 o 08 28 09" src="https://github.com/callstack-workshops/abbott-module-5-homework/assets/50460088/e17f942a-e72e-4a93-82f7-263f41256d70">
+![274535720-e17f942a-e72e-4a93-82f7-263f41256d70.png](assets/274535720-e17f942a-e72e-4a93-82f7-263f41256d70.png)
 
 </details>
 
 <details>
   <summary><b>Step 2. Analyze the results of the collected recording</b></summary><br>
 
-  <img width="800" alt="Zrzut ekranu 2023-07-25 o 08 40 31" src="https://github.com/callstack-workshops/abbott-module-5-homework/assets/50460088/9a513073-a4f2-4dcf-b865-35019d38dda7">
-  
+![274535828-9a513073-a4f2-4dcf-b865-35019d38dda7.png](assets/274535828-9a513073-a4f2-4dcf-b865-35019d38dda7.png)
+
   As you can see we have recorded three commits. Let’s analyze what has happened there:
 
   ************************First Commit************************
 
 The very first commit was triggered from the `BaseNavigationContainer`, so the performed by us transition has been started. As you can see below we have branches below the Native Stack Navigator related components:
 
-<img width="763" alt="Zrzut ekranu 2023-07-25 o 08 44 41" src="https://github.com/callstack-workshops/abbott-module-5-homework/assets/50460088/24b91bd9-4d88-4141-8392-a9734c39206f">
+![274535944-24b91bd9-4d88-4141-8392-a9734c39206f.png](assets/274535944-24b91bd9-4d88-4141-8392-a9734c39206f.png)
 
 The first is all about the HomeScreen and the second one is related to the LotteryDetails screen, as we can see the LotteryDetails screen is being rendered for the first time
 
-<img width="800" alt="Zrzut ekranu 2023-07-25 o 08 50 23" src="https://github.com/callstack-workshops/abbott-module-5-homework/assets/50460088/c2b60539-7366-4a20-8fe2-d2886638333e">
+![274536029-c2b60539-7366-4a20-8fe2-d2886638333e.png](assets/274536029-c2b60539-7366-4a20-8fe2-d2886638333e.png)
 
 
 ************Second commit************
 
 Let’s jump to the second commit where we can see that the LotteryDetails component itself was not re-rendered, but the implemented by us LotteryDetailsDataProvider was:
 
-<img width="800" alt="Zrzut ekranu 2023-07-25 o 08 53 33" src="https://github.com/callstack-workshops/abbott-module-5-homework/assets/50460088/d7da5e9f-66a0-495f-bcc3-2833f4e38524">
+![274536134-d7da5e9f-66a0-495f-bcc3-2833f4e38524.png](assets/274536134-d7da5e9f-66a0-495f-bcc3-2833f4e38524.png)
 
 The re-render took almost 36 ms and we see the reason behind it, the hook 2 changed. Notice also that we’re in the loading state currently since the Loader component is being displayed! 
 
 By switching to the Components tab we can see what hook has a number 2 in the `LotteryDetailsDataProvider`. It is the second `useState` hook inside of the `useLotteryDetails` hook:
 
-<img width="369" alt="Zrzut ekranu 2023-07-25 o 08 56 06" src="https://github.com/callstack-workshops/abbott-module-5-homework/assets/50460088/7087568c-0a8b-4a44-8e5e-2fdd9f10b86c">
+![274536251-7087568c-0a8b-4a44-8e5e-2fdd9f10b86c.png](assets/274536251-7087568c-0a8b-4a44-8e5e-2fdd9f10b86c.png)
 
 Let’s switch to the third commit and let’s see how the structure of components below the LotteryDetails screen component has changed. As we can see the LotteryDetailsView has been rendered, meaning the data has been successfully fetched from the internet and passed into the view: 
 
-<img width="800" alt="Zrzut ekranu 2023-07-25 o 09 06 27" src="https://github.com/callstack-workshops/abbott-module-5-homework/assets/50460088/42c90299-fe5a-4edc-b95b-f8574c0871e2">
+![274536357-42c90299-fe5a-4edc-b95b-f8574c0871e2.png](assets/274536357-42c90299-fe5a-4edc-b95b-f8574c0871e2.png)
 
 Take a look at what hook is signed as a number 1 in the `LotteryDetailsDataProvider` component
 </details>
@@ -832,5 +832,5 @@ const LotteriesSortingButton = () => {
 
   And that’s it! 🎉
 
-  > Final version: https://github.com/callstack-workshops/abbott-module-5-homework/tree/part-4
+  > Final version: https://github.com/callstack-workshops/questrade-module3-homework/tree/part-4
 </details>
