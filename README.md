@@ -4,10 +4,7 @@ Now that we have an awesome lottery app, our CTO and Tech Lead decided to fully 
 
 ### Homework management :house:
 
-The final result of all homework is the React Native Application full of features implemented iteratively in the end phase of each module in the course. In order to keep consistency and track all of your changes we highly recommend you to create your own GitHub repository where your work as a participant will be stored. Your GitHub repository should be shared with all trainers, which will enable us to verify your work and communicate:
-
-- Filip jarno: https://github.com/ziarno
-- Andrii Doroshenko: https://github.com/andriicallstack
+The final result of all homework is the React Native Application full of features implemented iteratively in the end phase of each module in the course. In order to keep consistency and track all of your changes we highly recommend you to create your own GitHub repository where your work as a participant will be stored. Your GitHub repository should be shared with all trainers, which will enable us to verify your work and communicate.
 
 ### The goal of this module’s homework
 
@@ -15,9 +12,7 @@ The goal of this homework is to build the details screen for the lottery and the
 
 ### Starting point
 
-You should be able to continue working on the same homework project but if you don’t have it available or you want to start fresh here is a starting point for this homework:
-
-https://github.com/callstack-workshops/questrade-module3-homework
+You should be able to continue working on the same homework project but if you don’t have it available, or you want to start fresh, use this repository as a starting point for this homework.
 
 ### Checkpoints :bulb:
 
@@ -121,7 +116,7 @@ Let’s implement the details screen for lotteries.
   Don’t forget to create navigation prop type:
 
   ```ts
-  export type LotteryDetailsNavigationProp = StackNavigationProp<
+  export type LotteryDetailsNavigationProp = NativeStackNavigationProp<
     RootStackParamList,
     'LotteryDetails'
   >;
@@ -296,7 +291,7 @@ const LotteryDetailsView = ({ lottery }: LotteryDetailsViewProps) => {
   ```
 </details>
 
-> :bulb: You are now here → [`part-1`](https://github.com/callstack-workshops/questrade-module3-homework/tree/part-1)
+> :bulb: You are now here → [`part-1`](../../tree/part-1)
 
 ## Part 2:  Error Boundaries for the Details Screen
 
@@ -441,7 +436,7 @@ useEffect(() => {
 
 </details>
 
-> :bulb: You are now here → [`part-2`](https://github.com/callstack-workshops/questrade-module3-homework/tree/part-2)
+> :bulb: You are now here → [`part-2`](../../tree/part-2)
 
 ## Part 3:  React DevTools
 
@@ -450,21 +445,8 @@ Let’s analyze how components inside of `LotteryDetails` screen are re-renderin
 <details>
   <summary><b>Installation</b></summary><br>
 
-  The easiest way to use React Developer Tools with React Native app is to install it globally:
+  Devtools is already included with your framework! Just press "`j`" in the terminal, after running `npm start`.
 
-    # Yarn
-    yarn global add react-devtools
-
-    # Npm
-    npm install -g react-devtools
-
-  After the installation, open developer tools from the the terminal
-
-    react-devtools
-
-  It should connect to any local React Native app that’s running.
-
-  > :bulb: Try reloading the app if developer tools doesn’t connect after a few seconds.
 </details>
 
 <details>
@@ -578,7 +560,7 @@ The example wrapper for the Provider may look like this:
 
 ```ts
 interface LotteriesSortingContextProviderProps {
-  children: JSX.Element;
+  children: React.ReactNode;
 }
 
 export const LotteriesSortingContextProvider = ({
@@ -733,7 +715,7 @@ const styles = StyleSheet.create({
     return (
         <TouchableOpacity accessibilityRole="button" style={styles.sortingButton}>
             <Text style={styles.sortingButtonText}>Prices</Text>
-            <AntDesign name="arrowup" size={16} color="black" />
+            <AntDesign name="arrow-up" size={16} color="black" />
         </TouchableOpacity>
     );
 };
@@ -760,7 +742,7 @@ const styles = StyleSheet.create({
 <details>
   <summary><b>Step 5. Connect the newly created button to the context</b></summary><br>
 
-  First of all let’s get the selectedSorting value in order to display proper arrow in the button related (up or down). We will use AntDesign icon named arrowup or arrowdown. In order to get a value of the context we will use the useLotteriesSortingContext hook: 
+  First of all let’s get the selectedSorting value in order to display proper arrow in the button related (up or down). We will use AntDesign icon named `arrow-up` or `arrow-down`. In order to get a value of the context we will use the useLotteriesSortingContext hook: 
 
 ```tsx
 const LotteriesSortingButton = () => {
@@ -768,8 +750,8 @@ const LotteriesSortingButton = () => {
 
   const iconName =
     selectedSorting === LotteryListSortingOptions.Ascending
-      ? 'arrowup'
-      : 'arrowdown';
+      ? 'arrow-up'
+      : 'arrow-down';
 
   return (
     <TouchableOpacity accessibilityRole="button" style={styles.sortingButton}>
@@ -788,8 +770,8 @@ const LotteriesSortingButton = () => {
 
   const iconName =
     selectedSorting === LotteryListSortingOptions.Ascending
-      ? 'arrowup'
-      : 'arrowdown';
+      ? 'arrow-up'
+      : 'arrow-down';
 
   return (
     <TouchableOpacity
@@ -832,5 +814,5 @@ const LotteriesSortingButton = () => {
 
   And that’s it! 🎉
 
-  > Final version: https://github.com/callstack-workshops/questrade-module3-homework/tree/part-4
+  > Final version: [`part-4`](../../tree/part-4)
 </details>

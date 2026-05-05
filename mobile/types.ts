@@ -1,4 +1,4 @@
-import { StackNavigationProp } from '@react-navigation/stack';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RouteProp } from '@react-navigation/native';
 export type Status = 'running' | 'finished';
 
@@ -18,15 +18,14 @@ export type RootStackParamList = {
   LotteryDetails: { id: string };
 };
 
-export type AddLotteryNavigationProp = StackNavigationProp<
+export type AddLotteryNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
-  'AddLottery',
-  'Register'
+  'AddLottery'
 >;
 
 export type RegisterScreenRouteProp = RouteProp<RootStackParamList, 'Register'>;
 
-export type LotteryDetailsNavigationProp = StackNavigationProp<
+export type LotteryDetailsNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
   'LotteryDetails'
 >;
