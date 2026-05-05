@@ -14,8 +14,8 @@ const LotteriesSortingButton = () => {
 
   const iconName =
     selectedSorting === LotteryListSortingOptions.Ascending
-      ? 'arrowup'
-      : 'arrowdown';
+      ? 'arrow-up'
+      : 'arrow-down';
 
   return (
     <TouchableOpacity

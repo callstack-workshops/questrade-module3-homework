@@ -22,7 +22,7 @@ const sortingReducer = (state: LotteryListSortingOptions) => {
 };
 
 interface LotteriesSortingContextProviderProps {
-  children: JSX.Element;
+  children: React.ReactNode;
 }
 
 export const LotteriesSortingContextProvider = ({
